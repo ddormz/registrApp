@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br>
+  <br>
+  <ion-img src="assets/img/avatar.jpg" style="width:150px center; height:150px"></ion-img>
+  <br>
+  <div *ngFor="let estudiante of listado">
+    <ion-label class="ion-text-center">
+      <p>Nombre Completo</p>
+    </ion-label>
+    <h5 class="ion-text-center">{{estudiante.nombre}}</h5>
+    <ion-label class="ion-text-center">
+      <p>Sede DuocUC</p>
+    </ion-label>
+    <h5 class="ion-text-center">{{estudiante.sede}}</h5>
+    <ion-label class="ion-text-center">
+      <p>Sección Inscrita</p>
+    </ion-label>
+    <h5 class="ion-text-center">{{estudiante.seccion}}</h5>
+  </div>
+  <ion-item>
+    <ion-label class="ion-text-center">
+ <p>Seleccione una Clase</p>
+  </ion-label>
+</ion-item>
+    <ion-select class="ion-text-center" value="App Movil" multiple="false">
+      <ion-select-option value="calidad">Calidad Soft.</ion-select-option>
+      <ion-select-option value="appmovil">App Movil</ion-select-option>
+      <ion-select-option value="inglesint">Ingles Intermedio</ion-select-option>
+      <ion-select-option value="arquitect">Arquitectura</ion-select-option>
+    </ion-select>
+  <ion-button  expand="block" fill="clear" shape="round" [routerLink]="['/inicsesion']">
+    Cerrar Sesión
+  </ion-button>
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="qr-code-outline" color="dark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>

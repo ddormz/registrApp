@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <br><br><br><br>
+  <ion-img src="assets/img/Check.png" style="width:150px center; height:150px"></ion-img>
+  <br>
+  <p class="ion-text-center">Su correo de restablecimiento ha sido enviado.</p>
+  <br><br>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col class="ion-align-self-center"></ion-col>
+      <ion-button  expand="full" fill="outline" shape="round" size="small" [routerLink]="['/inicsesion']">
+        <ion-icon slot="icon-only" size="medium" name="thumbs-up-outline"></ion-icon>
+        OK
+      </ion-button>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
